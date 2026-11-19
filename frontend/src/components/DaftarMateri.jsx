@@ -1,0 +1,19 @@
+function DaftarMateri({ materi }) {
+  return (
+    <div>
+      {materi.map((item) => (
+        <div key={item.id}>
+          <h3>{item.judul}</h3>
+          <p>Mata Kuliah: {item.mataKuliah}</p>
+          <p>Pertemuan {item.pertemuan}</p>
+
+          {item.tautan !== null && (
+            <a href={item.tautan}>Buka</a>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default DaftarMateri;
